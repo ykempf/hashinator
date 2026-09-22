@@ -3,6 +3,8 @@ project('Hashinator', 'cpp', 'cuda' ,default_options : ['cpp_std=c++20','warning
 #Config
 add_global_arguments('-DHASHMAPDEBUG', language : 'cpp')
 add_global_arguments('-DHASHMAPDEBUG', language : 'cuda')
+add_global_arguments('-DNOPROFILE', language : 'cpp')
+add_global_arguments('-DNOPROFILE', language : 'cuda')
 add_project_arguments(['--expt-relaxed-constexpr','--expt-extended-lambda' ], language: 'cuda')
 
 #Dependencies
