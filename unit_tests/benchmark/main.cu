@@ -4,7 +4,7 @@
 #include <unordered_set>
 #include <random>
 #include "../../include/hashinator/hashinator.h"
-#include <nvToolsExt.h>
+#include <nvtx3/nvToolsExt.h>
 #define PROFILE_START(msg)   nvtxRangePushA((msg))
 #define PROFILE_END() nvtxRangePop()
 constexpr int R = 50;
