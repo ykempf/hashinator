@@ -32,7 +32,7 @@
 #include <vector>
 
 #ifndef SPLIT_CPU_ONLY_MODE
-#ifdef __NVCC__
+#if defined(__NVCC__) || defined(__NVCOMPILER)
 #include <cuda_runtime_api.h>
 #else
 #include <hip/hip_runtime_api.h>
