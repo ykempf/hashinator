@@ -30,6 +30,8 @@ insertion_mechanism = executable('insertion', 'unit_tests/insertion_mechanism/ma
 tombstoneTest = executable('tbPerf', 'unit_tests/benchmark/tbPerf.cu', dependencies :gtest_dep)
 realisticTest = executable('realistic', 'unit_tests/benchmark/realistic.cu', dependencies :gtest_dep)
 hybridGPU = executable('hybrid_gpu', 'unit_tests/hybrid/main.cu',dependencies :gtest_dep )
+customAllocator_unit = executable('custom_allocator_test', 'unit_tests/custom_allocator/unit.cu',dependencies :gtest_dep )
+memtest_unit = executable('memtest', 'unit_tests/memtest/memtest.cu',dependencies :gtest_dep )
 
 
 #Test-Runner
@@ -48,3 +50,5 @@ test('hybridCPU_Test',  hybridCPU)
 test('hybridGPU_Test',  hybridGPU)
 test('TbTest',  tombstoneTest)
 test('RealisticTest',  realisticTest)
+test('CustomAllocatorTest',  customAllocator_unit)
+test('MemTest',  memtest_unit)
